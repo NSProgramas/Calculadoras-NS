@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+<title>Calculadora de Potência</title>
+<link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+<div>
+ <h1>Calculadora de Potênciação</h1>
+ <p>Insira a base: <input type = "number" id = "base"></p>
+ <P>Insira o expoente: <input type = "number" id = "expo"></p>
+ <input type = "button" id = "butao" value = "Calcular Potência" onclick = "Calcular()">
+ <p id = "p">
+</div>
+<script>
+function Calcular() {
+   var base = Number(window.document.getElementById('base').value)
+   var expo = Number(window.document.getElementById('expo').value)
+   var poten = Math.pow(base, expo)
+   var p = window.document.getElementById('p')
+   p.innerHTML = `<html>O resultado da potência ${base}<sup>${expo}</sup> é ${poten}</html>`
+}
+</script>
+</body>
+</html>
+

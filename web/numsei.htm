@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Calculadora de IMC</title>
+ <meta charset = "UTF-8">
+ <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+    <div>
+    <h1>Calculadora de IMC</h1>
+    <p>Coloque seu peso e sua altura (em metros) que eu defino o IMC.</p>
+    <h2>O que é IMC?</h2>
+    <p>O <strong>Índice de Massa Corporal (IMC)</strong> é uma medida feita para definir se alguém está abaixo do peso ou não, comparando o peso com a altura da pessoa. O IMC trata se do peso dividido pelo quadrado da altura. Essa é a tabela do IMC:</p>
+	<p><strong>Abaixo do peso ("magro(a)")</strong> - IMC abaixo de 18.5</p>
+	<p><strong>Peso "normal"</strong> - IMC entre 18.5 e 24.9</p>
+	<P><strong>Acima do peso</strong> - IMC entre 25 e 30</p>
+	<p><strong>Obesidade leve</strong> - IMC entre 30 e 40</p>
+	<P><STRONG>Obesidade Mórbida (crítico!)</STRONG> - IMC acima de 40</p>
+    <p>Insira a sua altura (em metros): <input type = "number" id = "metro" max = "4"></p>
+    <p>Insira seu peso: <input type = "number" id = "quilo"></p>
+    <input type = "button" id = "butao" value = "Calcular IMC" onclick = "Calcular()">
+    </div>
+    <div id = "saida">
+    </div>
+    <img src = "" id = "imajen">
+    <script>
+        function Calcular() {
+        var peso = Number(window.document.getElementById('quilo').value)
+        var altura = Number(window.document.getElementById('metro').value)
+        var imc = peso / (altura * altura)
+        var saida = window.document.getElementById('saida')
+        var imagem = window.document.getElementById('imajen')
+        var arquivo = ""
+        saida.innerHTML = `O seu IMC é ${imc}. \n`
+        if (imc < 18.5) {
+            saida.innerHTML +=  "Você está abaixo do peso."
+            arquivo = ""
+        } else if (imc >= 18.5 && imc < 25) {
+            saida.innerHTML += " Você está no peso ideal para sua altura. Continue se exercitando!"
+            arquivo = ""
+        } else if (imc >= 25 && imc < 30) {
+            saida.innerHTML += " Você está acima do peso, mas não está obeso(a). Exercite-se mais!"
+            arquivo = ""
+        } else if (imc > 30 && imc < 40) {
+           saida.innerHTML += " Você está obeso(a). Cuide se melhor! " 
+           arquivo = ""
+        } else {
+		   saida.innerHTML += "Você está com obesidade mórbida! Você tem que se tratar antes que isso vire uma doença! "
+           arquivo = ""
+        }
+        imagem.src = arquivo
+	}
+    </script>
+</body>
+</html>

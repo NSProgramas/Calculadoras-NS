@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+<title>Tocador de MP3</title>
+<meta charset = "UTF-8">
+<link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+<div>
+<h1>Tocador de MP3</h1>
+<p id = "autor">por Nicolas Souto</p>
+<p>Escolha uma de nossas músicas: </p>
+<p><strong>1</strong> - Música tema de Super Mario Bros.</p>
+<p><strong>2</strong> - Música tema de Super Mario World</p>
+<p><strong>3</strong> - Música tema de Dragon Ball</p>
+<p>PS: Caso queira ouvir outra música, recarregue o aplicativo</p>
+<P>Insira qual das 3 você quer: <input type = "number" id = "sel" min = "1" max = "4"></p>
+<input type = "button" id = "butao" value = "Tocar música" onclick = "Tocar()">
+</div>
+<div id = "musica">
+</div>
+<script>
+this.audio = new Audio();
+function Tocar() {
+ var sel = Number(window.document.getElementById('sel').value)
+ var musica = window.document.getElementById('musica')
+ switch(sel) {
+  case 1:
+  if (!audio.paused) {
+	  audio.pause();
+  }
+  this.audio = new Audio('SMB.mp3')
+  audio.play()
+  break
+  case 2: 
+  if (!audio.paused) {
+	  audio.pause();
+  }
+  this.audio = new Audio('SMW.mp3')
+  audio.play()
+  break
+  case 3:
+  if (!audio.paused) {
+	  audio.pause();
+  }
+  this.audio = new Audio('DB.mp3')
+   audio.play()
+   break
+  case 4:
+    if(!audio.paused) {
+	    audio.pause();
+    }
+    musica.innerHTML = "Você escolheu nossa música secreta. Foi bom te conhecer."
+	this.audio = new Audio('MS.mp3')
+	audio.play()
+	break
+ default:
+   window.alert("Insira um número válido!")
+ }
+ 
+ }
+
+
+</script>
+</body>
+</html> 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "Pt-Br">
+<head>
+    <title>Calculadora de Média Aritmética</title>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+  <div>
+      <h1>Média Aritmética</h1>
+      <p>Coloque as notas do seu aluno, e eu faço a média.</p>
+        <p>Insira o nome do aluno(a): <input type = "text" id = "nome" maxlength = "30"></p>
+        <p>Primeira nota: <input type = "number" id = "txtN1" min = "0" max = "10"></p>
+        <p>Segunda nota: <input type = "number" id = "txtN2" min = "0" max = "10"></p>
+        <input type = "button" value = "Calcular" id = "butao" onclick = "clicar()">
+        <p id = "cavalo"></p>
+    </div>
+  <script>
+      function clicar() {
+        var nome = window.document.getElementById('nome').value
+        var n1 = Number(window.document.getElementById('txtN1').value)
+        var n2 = Number(window.document.getElementById('txtN2').value)
+        var media = (n1 + n2) / 2
+        var cavalo = window.document.getElementById('cavalo')
+        cavalo.innerHTML = `A média das notas de ${nome} é ${media}`
+        if (media < 6) {
+          cavalo.innerHTML += "Está abaixo da média";
+        }
+      }  
+  </script>
+</body>

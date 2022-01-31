@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <title>Niduni Adivinho</title>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+    <div>
+   <h1>Jogo do adivinho</h1>
+   <p>Estou pensando num número entre 0 e 10. Tente adivinhar! </p>
+   <p>Qual é o número? <input type = "number" id = "adv" min = "1" max = "10"></p>
+   <input type = "button" value = "Adivinhar!" id = "butao" onclick = "Adivinhar()">
+   <img src = "akinator pensando.png" id = "imaji"/>
+   <p id = "par"></p>
+   </div>
+<script>
+    function Adivinhar() {
+    var img = window.document.getElementById('imaji')
+     var adv = Number(window.document.getElementById('adv').value);
+     var ale = Math.floor( Math.random()*10);
+     var p = window.document.getElementById('par');
+     var arquivo = "akinator pensando.png"
+        if (adv == ale) {
+            arquivo = "k.png"
+            p.innerHTML = `Você acertou! Ah, eu perdi!`;
+        } else {
+            arquivo = "akinator-ganhou.jpg"
+            p.innerHTML = `Você errou! eu pensei em ${ale}`;
+        }
+        img.src = arquivo
+    }
+    
+</script>
+</body>
+</html>

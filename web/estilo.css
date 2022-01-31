@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pao';
+    src: url("pão.ttf");
+}
+body {
+  background-image: url("cavalo.jfif");
+  font-family: Arial;
+}
+h1, h2 {
+ font-family: 'Pao';
+ color: red;
+}
+div {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+input#butao {
+    font-family: 'Pao';
+    padding: 5px;
+    color: white;
+    background-color: red;
+	border-radius: 5px;
+}
+p#autor{
+    font-family: 'Pao';
+    color: rgba(0,0,0,.3)
+}
+nav#menu {
+	padding: 5px;
+	margin: 3px;
+	background-color: red;
+	list-style: none;
+	color: white;
+	word-spacing: 10px;
+	font-family: 'Pao';
+}
+nav#menu ul li {
+	display: inline;
+}
+h1#principal {
+	display: inline;
+	color: white;
+	text-align: center;
+}
+nav#menu ul li a:hover {
+	background-color: white;
+	color: black;
+}
+img#imaji {
+	align: right;
+	height: 220px;
+	width: 220px;
+}
+#ponto, #s {
+   text-align: right;
+   font-family: 'Pao';
+   height: 10px;
+   color: orange;
+}
+input {
+	border-radius: 5px;
+}
+div#imagem {
+	text-align: right;
+}
+img#imajin {
+	height: 100px;
+	width: 150px;
+}

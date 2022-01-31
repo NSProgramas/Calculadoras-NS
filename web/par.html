@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+<div>
+    <h1>Ímpar ou Par!</h1>
+    <P>Jogue o clássico jogo "Impar ou Par" com nossa Inteligência Artificial.</P>
+    <P>Digite um número: <input type = "number" id = "numero" min = "0" max = "10"></P>
+    <P>Escolha: </P>
+    <p><strong>1</strong> - Par</p>
+    <p><strong>2</strong> - Ímpar</p>
+    <p>Insira aqui sua escolha: <input type = "number" id = "escolha" min = "1" max = "2"></p>
+    <input type = "button" id = "butao" value = "Jogar!" onclick = "Jogar()">
+    <p id = "p"></p>
+</div>
+<script>
+    function Jogar() {
+        var numero = Number(window.document.getElementById('numero').value)
+        var escolha = Number(window.document.getElementById('escolha').value)
+        var pc = Math.floor(Math.random()*10)
+        var total = numero + pc
+        var p = window.document.getElementById('p')
+        if (escolha == 2) {
+            if (total % 2 == 0) {
+                p.innerHTML = `O total é ${total}. Você perdeu!`
+                pontos -= 20
+            } else if (total % 2 == 1) {
+                p.innerHTML = `O total é ${total}. Você venceu!` 
+                pontos += 20
+            }
+        } else if (escolha == 1) {
+            if (total % 2 == 0) {
+                p.innerHTML = `O total é ${total}. Você venceu!`
+                pontos += 20
+            } else if (total % 2 == 1) {
+                p.innerHTML = `O total é ${total}. Você perdeu!`
+                pontos -= 20
+            }
+        } else {
+            window.alert("Insira um número válido!")
+        }
+        
+     
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href="estilo.css">
+</head> 
+<body>
+    <div>
+        <h1>Pedra, Papel e Tesoura</h1>
+    <P>Jogue o clássico jogo "Pedra, Papel e Tesoura" (ou Joquempô) com o computador, usando números ao invés das mãos.</P>
+    <P>Escolha sua jogada: </P>
+    <P><strong>1</strong> - Pedra</P>
+    <P><strong>2</strong> - Papel</P>
+    <P><strong>3</strong> - Tesoura</P>
+    <P>Insira sua escolha aqui: <input type = "number" id = "jogada" min = "1" max = "3"></P>
+    <input type = "button" id = "butao" value = "Jogar!" onclick = "Jogar()">
+    <P id = "p"></P>
+    </div>
+<script>
+    function Jogar() {
+        var jogada = Number(window.document.getElementById('jogada').value)
+        var pc = Math.floor(1 + Math.random()*3)
+        var p = window.document.getElementById('p')
+        if (jogada == 1) {
+           if (pc == 2) {
+               p.innerHTML = `Papel enrola pedra. O computador venceu!`
+           } else if (pc == 3) {
+               p.innerHTML = `Pedra quebra tesoura. Você venceu!`
+           } else if (pc == 1) {
+               p.innerHTML = `Empate!`
+           }
+
+        } else if (jogada == 2) {
+            if (pc == 2) {
+                p.innerHTML = `Empate!`
+            } else if (pc == 3) {
+                p.innerHTML = `Tesoura corta papel. O computador venceu!`
+            } else if (pc == 1) {
+                p.innerHTML = `Papel enrola pedra. Você venceu! `
+            }
+
+        } else if (jogada == 3) {
+           if (pc == 3) {
+             p.innerHTML = `Empate!`
+           } else if (pc == 2){
+              p.innerHTML = `Tesoura corta papel. Você venceu!`
+           } else if (pc == 1) {
+               p.innerHTML = `Pedra quebra tesoura. O computador venceu!`
+           }
+        } else {
+            alert("Insira um número válido!")
+        }
+    }
+</script>
+</body>
+</html>

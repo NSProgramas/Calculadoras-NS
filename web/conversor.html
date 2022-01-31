@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+  <title>Conversor de Medidas</title>
+  <meta charset = "UTF-8">
+  <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+ <div>
+ <h1>Conversor de Medidas</h1>
+ <P>Coloque uma altura qualquer em metros, que eu a transformo em centímetros e milímetros.</p>
+ <p>Insira uma altura em metros: <input type = "number" id = "metro" min = "0"></p>
+ <p>OBS: Esse conversor converte apenas metros. Se quer converter milhas, <a href = "milhas.html">Clique aqui</a>.</p>
+ <input type = "button" id = "butao" value = "Converter altura" onclick = "Converter()">
+ <p id = "paragrafo"></p>
+ </div>
+ <script>
+   function Converter(){
+	var metro = Number(window.document.getElementById('metro').value)
+	var p = document.getElementById('paragrafo')
+	var cm = metro * 100
+	var mm = metro * 1000
+	var km = metro / 1000
+	var dm = metro * 10
+	var mc = metro * 1000000
+	var milha = metro / 1609.34
+	var pe = metro * 3.28084
+	p.innerHTML = `Esse valor corresponde a ${cm} centímetros, ${mm} milímetros, ${km} quilômetros, ${dm} decímetros, ${mc} micrômetros, ${milha} milhas terrestres e ${pe} pés. `
+	}
+ </script>
+</body>
+</html>

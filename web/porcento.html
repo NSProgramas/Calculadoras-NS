@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <link rel = "stylesheet" href = "estilo.css">
+    <meta charset = "UTF-8">
+</head>
+<body>
+    <div>
+    <h1>Fração para Porcentagem</h1>
+    <P>Insira o numerador: <input type = "number" id = "num"></P>
+    <P>Insira o denominador: <input type = "number" id = "den"></P>
+    <input type = "button" value = "Converter Fração" id = "butao" onclick = "Converter()">
+    <p id = "p"></p>
+    </div>
+<script>
+    let Converter = () => {
+        let num = Number(window.document.getElementById('num').value);
+        let den = Number(window.document.getElementById('den').value);
+        let p = window.document.getElementById('p');
+        let porc = (num / den) * 100;
+        if (den == 0) {
+            alert("O denominador não pode ser zero!");
+        } else {
+       p.innerHTML = `A fração ${num}/${den} corresponde a porcentagem de ${porc}%`;
+     }
+}
+</script>
+</body>
+</html>

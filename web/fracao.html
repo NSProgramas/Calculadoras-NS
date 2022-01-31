@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+ <meta charset = "UTF-8">
+ <title>Fração para Números</title>
+ <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+<div>
+ <h1>Conversor de Frações</h1>
+ <p>Insira o numerador e o denominador de uma fração que eu a transformo num número decimal.</p>
+ <p>Numerador: <input type = "number" id = "numerador"></p>
+ <P>Denominador: <input type = "number" id = "denominador"></p>
+ <input type = "button" id = "butao" value = "Converter Fração" onclick = "Converter()">
+ <P id = "p"></p>
+</div>
+<script>
+ function gt(el) {
+    return window.document.getElementById(el)
+ }
+ function Converter() {
+    
+    let num = Number(gt('numerador').value)
+	let den = Number(gt('denominador').value)
+	let fracao = num / den
+	let p = gt('p')
+	if (den == 0) {
+	 alert(`O denominador não pode ser zero!`)
+	} else {
+	  p.innerHTML = `A fração ${num}/${den} corresponde ao número decimal ${fracao}`
+	}
+ }
+</script>
+</body>
+</html>

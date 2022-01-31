@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+<title>Calculadoras NS</title>
+<link rel = "stylesheet" href = "estilo.css">
+<meta name="google-site-verification" content="0Oi-RlZoKQKkwrj8ZRmDhHRiYyFO6Y9NYHTGnW7zuE8" />
+<meta name = "keywords" content = "calculadoras, imc, ns, calculo, jogo, joquempo, adivinho, nicolas souto, programador">
+<meta name = "description" content = "Use várias calculadoras para diversas utilidades.">
+</head>
+<body>
+    <div>
+    <h1>Calculadoras NS</h1>
+     <p id = "autor">As melhores que eu já vi.</p>
+     <h2>O que são as Calculadoras NS?</h2>
+     <p><strong>Calculadoras NS</strong> é o nome dado aos programas feitos por Nicolas Souto para este aplicativo, variando desde calculadoras (como o próprio nome diz) a conversores de valores e tocadores de música e até mesmo jogos. Abaixo, você terá de inserir um número e te redicionaremos para uma Calculadora Ns de acordo com esse número.</p>
+     <P>Escolha uma de nossas Calculadoras: </P>
+     <p><strong>1</strong> - Conversor de Graus</p>
+     <p><strong>2</strong> - Calculadora de Média </p>
+     <p><strong>3</strong> - Tocador de MP3</p>
+     <P><strong>4</strong> - Calculadora de IMC</P>
+	 <p><strong>5</strong> - Conversor de Medidas</p>
+	 <p><strong>6</strong> - Calculadora de Raiz</p>
+	 <p><strong>7</strong> - Calculadora de Potência</p>
+	 <p><strong>8</strong> - Jogo: Adivinhação</p>
+     <P><stRong>9</strong> - Jogo: Ímpar ou Par</P>
+     <P><strong>10</strong> - Jogo: Joquempô</P>
+     <p><strong>11</strong> - Jogo: Cara ou Coroa</p>
+     <p><strong>12</strong> - Calculadora de Hipotenusa</p>
+     <p><strong>13</strong> - Inversor de números</p>
+	 <p><strong>14</strong> - Fração para número</p>
+	 <P><STRONG>15</STRONG> - Decimal para binário</P>
+     <P><strong>16</strong> - Fração para porcentagem</p>
+     <p>Insira aqui a sua escolha: <input type = "number" id = "os" min = "1" max = "15"></p>
+     <input type = "button" id = "butao" value = "Escolher Calculadora" onclick = "Escolher()"> 
+    </div>
+ <script>
+     function Escolher() {
+         var os = Number(window.document.getElementById('os').value)
+        switch (os) {
+           case 1 :
+               window.location.href = "Niduni do Grau.html"
+               break
+           case 2 :
+               window.location.href = "calcular.html"
+               break
+           case 3 :
+               window.location.href = "k vallow.html"
+               break
+            case 4 :
+                window.location.href = "numsei.htm"
+                break
+			case 5:
+			     window.location.href = "conversor.html"
+				 break
+		    case 6:
+			    window.location.href = "raiz.html"
+				break
+			case 7:
+			    window.location.href = "pot.html"
+				break
+			case 8:
+			   window.location.href = "jogo.html"
+			   break
+            case 9:
+                window.location.href = "par.html"
+                break
+            case 10:
+                window.location.href = "jokenpo.html"
+                break
+            case 11:
+                window.location.href = "moeda.html"
+                break
+            case 12:
+                window.location.href = "hipo.html"
+                break
+            case 13:
+                window.location.href = "inverso.html"
+				break
+			case 14:
+			     window.location.href = "fracao.html"
+				 break
+		    case 15:
+			     window.location.href = "binario.html"
+				 break
+            case 16:
+                 window.location.href = 'porcento.html'
+                 break
+            default:
+                window.alert("Insira um número válido!")
+        }
+     }
+ </script>
+</body>
+</html>

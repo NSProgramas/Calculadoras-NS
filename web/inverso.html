@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+<link rel = "stylesheet" href = "estilo.css">
+<title>Inversor de números</title>
+</head>
+<body>
+<div>
+ <h1>Inversor de números</h1>
+ <p>O inversor de números têm o "poder" de transformar números em frações e depois, virá-las ao avesso.</p>
+ <p>Insira um número: <input type = "number" id = "num"></p>
+ <input type = "button" id = "butao" value = "Inverter número" onclick = "Inverter()">
+<p id = "p"></p>
+</div>
+<script>
+    function Inverter() {
+        let num = Number(window.document.getElementById('num').value)
+        let p = window.document.getElementById('p')
+        let inv = Math.pow(num, -1)
+        p.innerHTML = `O inverso desse número é ${inv}. ` 
+    }
+</script>
+</body>
+</html>

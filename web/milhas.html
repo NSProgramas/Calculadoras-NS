@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+ <meta charset = "UTF-8">
+ <title>Conversor de milhas</title>
+ <link rel = "stylesheet" href = "estilo.css">
+</head>
+<body>
+  <div>
+  <h1>Conversor de milhas terrestres</h1>
+  <P>Como uma alternativa mais simples dos quilômetros e metros, a milha terrestre é bastante usada para calcular distâncias terrestres (como o próprio nome diz). Por serem as milhas mais usadas, são chamadas apenas de milhas e são tratadas como milhas "normais". A função dessa Calculadora Niduni é converter milhas terrestres para quilômetros e outros tipos de milhas. </P>
+  <p>Insira uma milha terrestre: <input type = "number" id = "mt"></p>
+  <input type = "button" id = "butao" value = "Converter Milhas" onclick = "Converter()">
+  <p id = "p"></p>
+  </div>
+<script>
+    function Converter() {
+        let mt = Number(window.document.getElementById('mt').value)
+        let p = window.document.getElementById('p')
+        let mn = mt * 0.868976
+        let ma = mn * 0.8694
+        let metro = mt * 1609.34
+        p.innerHTML = `Esse valor corresponde a ${mn} milhas náuticas, ${ma} milhas aéreas e ${metro} metros.`
+    }
+</script>
+</body>
+</html>
