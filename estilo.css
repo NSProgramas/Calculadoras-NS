@@ -1,0 +1,71 @@
+@font-face {
+  font-family: Fonte;
+  src: url('fontes/fonte.ttf');
+}
+#menu ul {
+    padding: 20px;
+}
+#menu{
+   border-radius: 10px;
+}
+#menu ul li{
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    list-style: none;
+    font-family: Fonte;
+    font-size: 20px;
+}
+section#texto {
+  font-family: Arial;
+  font-size: 16px;
+  text-align: justify;
+  padding:30px;
+}
+#baixar { 
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    font-family: Fonte;
+    color: white;
+    font-size: 18px;
+}
+#fonte {
+    color: rgba(0, 0, 0, .3);
+}
+#imagem1 {
+    width: 30%;
+    height: 30%;
+}
+#imagem2 {
+    width: 30%;
+    height: 30%;
+}
+#imagem3 {
+    width: 30%;
+    height: 30%;
+}
+#hr {
+    color:rgba(0, 0, 0, .9);
+}
+#logo{
+    color: white;
+    font-size: 30px;
+    font-family: Fonte, sans-serif;
+}
+h1 {
+    font-size: 28px;
+    font-family: Fonte;
+}
+h2 {
+    font-size: 23px;
+    font-family: Fonte;
+}
+header {
+    width: 100%;
+    background-color: red;
+}
+a {
+  color: white;
+}
