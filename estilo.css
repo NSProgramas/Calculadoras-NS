@@ -8,6 +8,7 @@ body {
 }
 #menu ul {
     padding: 20px;
+    align-items: center;
 }
 #menu{
    border-radius: 10px;
