@@ -3,7 +3,7 @@
   src: url('fontes/fonte.ttf');
 }
 body {
-  backgrpund-color: rgba(0, 0, 0, .3);
+  backgrpund: url("cavalo.jfif");
 }
 #menu ul {
     padding: 20px;
@@ -21,6 +21,7 @@ body {
     font-size: 20px;
 }
 section#texto {
+  background-color: white;
   font-family: Arial;
   font-size: 16px;
   text-align: justify;
