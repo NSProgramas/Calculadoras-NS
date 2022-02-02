@@ -3,7 +3,7 @@
   src: url('fontes/fonte.ttf');
 }
 body {
-  backgrpund-image: url("cavalo.jfif");
+  background: url("cavalo.jfif");
 }
 #menu ul {
     padding: 20px;
