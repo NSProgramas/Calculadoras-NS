@@ -12,7 +12,7 @@ Além de calculadora, o programa tem várias funções:
 
 # Os Jogos
 
-<p>Nós possuímos também minijogos, baseado na "sorte" do jogador e em números aleatórios.</p>
+<p>Nós possuímos também minijogos, baseados na "sorte" do jogador e em números aleatórios.</p>
 <p>No Jogo do Adivinho, o gênio (qualquer semelhança com o Akinator não é mera coincidência) está pensando num número aleatório e o jogador deve digitar seu palpite. As chances de acerto são de 1 contra 11 (cerca de 9.09%).</p>
 <p>No Joquempô (também chamado de "Pedra, Papel e Tesoura") o jogador usa números no lugar das mãos. O adversário é o próprio aplicativo/site (vulgo "computador"), que lança números aleatórios. As chances de vitória, derrota e empate são exatamente iguais (cerca de 33.3%).</p>
 <p>No Ímpar ou Par, você digita um número para a jogada e acima você define se joga Ímpar ou Par.</p>
